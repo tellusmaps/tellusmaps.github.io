@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map Title</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="https://cartodb.com/assets/favicon.ico" />
+    <style>
+      html, body, #map{
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+    </style>
+
+    <link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+  </head>
+  <body>
+    <div id="map"></div>
+
+    
+    <!-- include cartodb.js library -->
+    <script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"></script>
+
+    <script>
+      function main() {
+        cartodb.createVis('map', 'https://nygeog.carto.com/api/v2/viz/c6169d57-9723-4979-ba9a-76825df29d4b/viz.json', {
+            // title: true,
+            description: true,
+            search: true,
+            tiles_loader: true,
+            // center_lat: -22.9785,
+            // center_lon: -43.3373, 
+            // zoom: 17,
+            scrollwheel: false,
+            search: false,
+            shareable: false,
+            // layer_selector: true,
+        })
+      }
+      window.onload = main;
+    </script>
+    
+  </body>
+</html>
